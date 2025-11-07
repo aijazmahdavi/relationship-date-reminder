@@ -1,0 +1,31 @@
+name: Relationship Date Reminder
+
+on:
+  schedule:
+    # Runs every day at 9:00 AM UTC (adjust timezone as needed)
+    - cron: '0 9 * * *'
+  workflow_dispatch: # Allows manual trigger for testing
+
+jobs:
+  check-and-notify:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+    
+    - name: Install dependencies
+      run: npm install
+    
+    - name: Run reminder script
+      env:
+        RELATIONSHIP_START_DATE: '2024-01-15' # ⚠️ CHANGE THIS to your relationship start date (YYYY-MM-DD)
+        GMAIL_USER: ${{ secrets.GMAIL_USER }}
+        GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+        RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}
+      run: node reminder.js
