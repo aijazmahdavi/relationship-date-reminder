@@ -6,8 +6,8 @@ Never forget your monthsary or anniversary again! This GitHub Action automatical
 
 ### 1. Create Repository
 ```bash
-git clone <your-repo-url>
-cd <your-repo-name>
+git clone https://github.com/aijazmahdavi/relationship-date-reminder.git
+cd relationship-date-reminder
 ```
 
 ### 2. Create Required Files
