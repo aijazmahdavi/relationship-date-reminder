@@ -1,0 +1,12 @@
+{
+  "name": "relationship-reminder",
+  "version": "1.0.0",
+  "description": "Automated monthsary and anniversary reminder",
+  "main": "reminder.js",
+  "scripts": {
+    "test": "node reminder.js"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.7"
+  }
+}
