@@ -24,7 +24,7 @@ jobs:
     
     - name: Run reminder script
       env:
-        RELATIONSHIP_START_DATE: '2025-07-09' # ⚠️ CHANGE THIS to your relationship start date (YYYY-MM-DD)
+        RELATIONSHIP_START_DATE: '2025-07-08' # ⚠️ CHANGE THIS to your relationship start date (YYYY-MM-DD)
         GMAIL_USER: ${{ secrets.GMAIL_USER }}
         GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
         RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}
